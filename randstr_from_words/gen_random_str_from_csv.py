@@ -8,7 +8,8 @@ import sys
 def get_substr_word(word: str, len: int) -> str:
     return choice(word.split(" "))[:len]
 
-def get_prefix_word
+def get_prefix_word(word: str, len, int) -> str:
+    return word.sprit(" ")[0][:len]
 
 if len(sys.argv) != 2:
     print('Usage: ./gen_rand_str_from_csv.py <csvpath>')
@@ -22,4 +23,4 @@ for i in range(10):
     word = ' '.join([choice(r) for r in m])
     print(word)
 
-    print(get_rand_substr(word, 3))
+    print(get_substr_word(word, 3))
